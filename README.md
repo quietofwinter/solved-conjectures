@@ -1,16 +1,17 @@
-# Solved conjectures and Lean-verified proofs
+# Resolved conjectures and Lean-verified proofs
 
-Proofs of mathematical conjectures, in two groups: conjectures for which no earlier proof was found, and first Lean 4 verifications of results proved earlier by others. Each entry has a written proof, and the Lean column shows whether the proof has also been checked by machine in Lean 4.
+Proofs and disproofs of mathematical conjectures, in two groups: conjectures for which no earlier resolution was found, and first Lean 4 verifications of results proved earlier by others. Each entry has a written proof, and the Lean column shows whether the proof has also been checked by machine in Lean 4.
 
 Maintained by Jason Benham.
 
-## Solved conjectures
+## Resolved conjectures
 
-Results for which no earlier proof was found. Each entry gives the date and scope of the search; priority is provisional.
+Conjectures proved or disproved for which no earlier resolution was found. Each entry gives the date and scope of the search; priority is provisional.
 
 | Result | Finding | Lean | Evidence |
 |---|---|:---:|---|
 | [Integrality and Bala's supercongruence for OEIS A364172](a364172-bala-integrality/) | **Integrality proved; the supercongruence follows.** a(n) = (6n)!·(n/3)! / ((3n)!·(2n)!·(4n/3)!) from [OEIS A364172](https://oeis.org/A364172) is always an integer, and a(n·p^r) ≡ a(n·p^(r−1)) (mod p^(3r)) for every prime p ≥ 5 and all positive integers n and r, as conjectured by Peter Bala; the congruence also follows from integrality by a theorem of Bajaj and Burns (2026), and priority for integrality is provisional (no earlier proof found in a search on November 19, 2026). | ☑ | [Written proof](a364172-bala-integrality/A364172.pdf) · [Lean proof](a364172-bala-integrality/A364172.lean) · [Notes](a364172-bala-integrality/README.md) |
+| [Cloitre's integrality observation for OEIS A074740](a074740-cloitre-integrality/) | **Disproved; complete classification.** a(n) = n!·2^(n−1)/∏_{k=1..n} τ(k) from [OEIS A074740](https://oeis.org/A074740), described in Benoit Cloitre's 2002 comment as "appears to be an integer", first fails to be an integer at n = 1834 and is an integer exactly for n ≤ 1833 and n ∈ {1856, 1864, 1868, 1872, 1873, …, 1880}; priority is provisional (no earlier disproof found in a search on November 19, 2026). | ◐ Only the counterexample (n = 1834, with integrality at n = 1833) is formalized; the classification is not. | [Written proof](a074740-cloitre-integrality/A074740.pdf) · [Lean check](a074740-cloitre-integrality/A074740.lean) · [Program](a074740-cloitre-integrality/verify.py) · [Notes](a074740-cloitre-integrality/README.md) |
 
 ## First Lean verifications
 
