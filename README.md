@@ -19,6 +19,7 @@ Results first proved by others, for which this repository gives the first machin
 | Result | Finding | Lean | Evidence |
 |---|---|:---:|---|
 | [Bala's supercongruence for OEIS A364175](a364175-bala-supercongruence/) | **First Lean-verified proof.** For every prime p ≥ 5 and all positive integers n and r, a(n·p^r) ≡ a(n·p^(r−1)) (mod p^(3r)), where a(n) = (6n)!·(2n/3)! / ((3n)!·(2n)!·(5n/3)!). Conjectured by Peter Bala in [OEIS A364175](https://oeis.org/A364175). An earlier written proof, not formalized, was given by R. A. Bajaj and A. Burns on August 1, 2026; the proof here was found independently. | ☑ | [Written proof](a364175-bala-supercongruence/A364175.pdf) · [Lean proof](a364175-bala-supercongruence/A364175.lean) · [Notes](a364175-bala-supercongruence/README.md) |
+| [Integrality and Bala's supercongruence for OEIS A364178](a364178-bala-supercongruence/) | **First Lean-verified proof.** a(n) = (10n)!·(3n)!·(n/2)! / ((6n)!·(5n)!·(3n/2)!·n!) from [OEIS A364178](https://oeis.org/A364178) is always an integer, and a(n·p^r) ≡ a(n·p^(r−1)) (mod p^(3r)) for every prime p ≥ 5 and all positive integers n and r, as conjectured by Peter Bala; an earlier written proof of both integrality and the congruence, not formalized, was given by R. A. Bajaj and A. Burns in August 2026. | ☑ | [Written proof](a364178-bala-supercongruence/A364178.pdf) · [Lean proof](a364178-bala-supercongruence/A364178.lean) · [Notes](a364178-bala-supercongruence/README.md) |
 
 ### What the Lean column means
 
