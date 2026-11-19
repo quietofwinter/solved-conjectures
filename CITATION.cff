@@ -7,4 +7,4 @@ authors:
     given-names: Jason
 date-released: "2026-11-19"
 license: Apache-2.0
-abstract: "Proofs of open mathematical conjectures, each with a written proof and, where marked, a Lean 4 proof."
+abstract: "Proofs of mathematical conjectures, each with a written proof and, where marked, a Lean 4 proof."

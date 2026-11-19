@@ -1,6 +1,6 @@
 # Solved conjectures
 
-Proofs of open mathematical conjectures. Each entry has a written proof, and the Lean column shows whether the proof has also been checked by machine in Lean 4.
+Proofs of mathematical conjectures. Each entry has a written proof, and the Lean column shows whether the proof has also been checked by machine in Lean 4. Each entry also says whether an earlier proof is known.
 
 Maintained by Jason Benham.
 
@@ -8,7 +8,7 @@ Maintained by Jason Benham.
 
 | Result | Finding | Lean | Evidence |
 |---|---|:---:|---|
-| [Bala's supercongruence for OEIS A364175](a364175-bala-supercongruence/) | **Proved.** For every prime p ≥ 5 and all positive integers n and r, a(n·p^r) ≡ a(n·p^(r−1)) (mod p^(3r)), where a(n) = (6n)!·(2n/3)! / ((3n)!·(2n)!·(5n/3)!). Conjectured by Peter Bala in [OEIS A364175](https://oeis.org/A364175). | ☑ | [Written proof](a364175-bala-supercongruence/A364175.pdf) · [Lean proof](a364175-bala-supercongruence/A364175.lean) · [Notes](a364175-bala-supercongruence/README.md) |
+| [Bala's supercongruence for OEIS A364175](a364175-bala-supercongruence/) | **First Lean-verified proof.** For every prime p ≥ 5 and all positive integers n and r, a(n·p^r) ≡ a(n·p^(r−1)) (mod p^(3r)), where a(n) = (6n)!·(2n/3)! / ((3n)!·(2n)!·(5n/3)!). Conjectured by Peter Bala in [OEIS A364175](https://oeis.org/A364175). An earlier written proof, not formalized, was given by R. A. Bajaj and A. Burns on August 1, 2026; the proof here was found independently. | ☑ | [Written proof](a364175-bala-supercongruence/A364175.pdf) · [Lean proof](a364175-bala-supercongruence/A364175.lean) · [Notes](a364175-bala-supercongruence/README.md) |
 
 ### What the Lean column means
 
@@ -23,6 +23,7 @@ Maintained by Jason Benham.
 - These are unrefereed notes, not peer-reviewed publications.
 - The proofs were developed with the assistance of Claude (Anthropic).
 - Each entry names the earlier work it builds on and says which parts are new.
+- Where someone else proved the result first, the entry says so and cites that proof. "First Lean-verified proof" means first as far as a search at the time of posting could find.
 - A ☑ means Lean accepted the proof of the formal statement in that entry's Lean file. It does not by itself show that the formal statement matches the informal conjecture, so each entry says where its formal statement comes from.
 
 ## Checking a Lean proof
