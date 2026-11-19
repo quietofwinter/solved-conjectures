@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "If you use a result from this repository, please cite it as below, and also cite the sources named in that result's notes."
+title: "Solved conjectures"
+type: software
+authors:
+  - family-names: Benham
+    given-names: Jason
+date-released: "2026-11-19"
+license: Apache-2.0
+abstract: "Proofs of open mathematical conjectures, each with a written proof and, where marked, a Lean 4 proof."

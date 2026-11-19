@@ -1,0 +1,48 @@
+# Solved conjectures
+
+Proofs of open mathematical conjectures. Each entry has a written proof, and the Lean column shows whether the proof has also been checked by machine in Lean 4.
+
+Maintained by Jason Benham.
+
+## Results
+
+| Result | Finding | Lean | Evidence |
+|---|---|:---:|---|
+| [Bala's supercongruence for OEIS A364175](a364175-bala-supercongruence/) | **Proved.** For every prime p ≥ 5 and all positive integers n and r, a(n·p^r) ≡ a(n·p^(r−1)) (mod p^(3r)), where a(n) = (6n)!·(2n/3)! / ((3n)!·(2n)!·(5n/3)!). Conjectured by Peter Bala in [OEIS A364175](https://oeis.org/A364175). | ☑ | [Written proof](a364175-bala-supercongruence/A364175.pdf) · [Lean proof](a364175-bala-supercongruence/A364175.lean) · [Notes](a364175-bala-supercongruence/README.md) |
+
+### What the Lean column means
+
+| Mark | Meaning |
+|:---:|---|
+| ☑ | The full statement is proved in Lean 4. The file compiles with no `sorry` and uses only the standard axioms. |
+| ◐ | Partly formalized. The entry lists what is still missing. |
+| ☐ | Not formalized. |
+
+## Scope
+
+- These are unrefereed notes, not peer-reviewed publications.
+- The proofs were developed with the assistance of Claude (Anthropic).
+- Each entry names the earlier work it builds on and says which parts are new.
+- A ☑ means Lean accepted the proof of the formal statement in that entry's Lean file. It does not by itself show that the formal statement matches the informal conjecture, so each entry says where its formal statement comes from.
+
+## Checking a Lean proof
+
+Every entry's notes give the exact Lean version and the commands used. For entries whose statements come from the [Formal Conjectures](https://github.com/google-deepmind/formal-conjectures) repository, the check looks like this:
+
+```
+git clone https://github.com/google-deepmind/formal-conjectures
+cd formal-conjectures
+git checkout <commit named in the entry>
+lake exe cache get
+lake env lean /path/to/the/entry.lean
+```
+
+The check passes if the last command prints no `error` lines. Warnings are harmless.
+
+## Citing
+
+Use the "Cite this repository" button on GitHub, which reads [CITATION.cff](CITATION.cff). Please also cite the sources named in the entry you use.
+
+## Licence
+
+Apache License 2.0. See [LICENSE](LICENSE). Lean files that build on other projects keep those projects' notices in their headers.
